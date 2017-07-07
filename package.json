@@ -1,0 +1,15 @@
+{
+  "name": "gitpages",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/dxyqqs/dxyqqs.github.io.git",
+  "author": "dxyqqs <dxyqq@sina.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^4.1.1",
+    "eslint-config-airbnb-base": "^11.2.0",
+    "eslint-plugin-import": "^2.6.1",
+    "webpack": "2.6.1",
+    "webpack-dev-server": "^2.5.0"
+  }
+}
