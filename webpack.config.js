@@ -7,6 +7,7 @@ module.exports = {
     app: './app/index.js',
   },
   output: {
+    publicPath:'.',
     path: path.join(__dirname, 'docs'),
     filename: 'libs/[name].js?[hash]',
   },
