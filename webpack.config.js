@@ -24,7 +24,6 @@ module.exports = {
     new webpack.DllReferencePlugin({
       context: __dirname,
       manifest: require(path.join(__dirname, 'docs/dll', 'dll.json')),
-      sourceType: 'commonjs2',
     }),
     new HtmlPlugin({
       template: path.join(__dirname, 'app/index.html'),

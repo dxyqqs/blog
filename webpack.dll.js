@@ -9,7 +9,6 @@ module.exports = {
     path: path.join(__dirname, '/docs/libs'),
     filename: '[name].js',
     library: '[name]_[hash]',
-    libraryTarget: 'commonjs2',
   },
   plugins: [
     new webpack.DllPlugin({

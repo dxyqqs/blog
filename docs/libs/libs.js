@@ -1,4 +1,4 @@
-module.exports =
+var libs_3525a10bb445ece13de2 =
 /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
