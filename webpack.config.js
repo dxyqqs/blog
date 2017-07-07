@@ -7,7 +7,7 @@ module.exports = {
     app: './app/index.js',
   },
   output: {
-    path: path.join(__dirname, 'doc'),
+    path: path.join(__dirname, 'docs'),
     filename: 'libs/[name].js?[hash]',
   },
   module: {
@@ -22,7 +22,7 @@ module.exports = {
   plugins: [
     new webpack.DllReferencePlugin({
       context: __dirname,
-      manifest: require(path.join(__dirname, 'doc/dll', 'dll.json')),
+      manifest: require(path.join(__dirname, 'docs/dll', 'dll.json')),
       sourceType: 'commonjs2',
     }),
     new HtmlPlugin({

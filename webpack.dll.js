@@ -6,7 +6,7 @@ module.exports = {
     libs: ['babel-polyfill', 'react', 'react-dom'],
   },
   output: {
-    path: path.join(__dirname, '/doc/libs'),
+    path: path.join(__dirname, '/docs/libs'),
     filename: '[name].js',
     library: '[name]_[hash]',
     libraryTarget: 'commonjs2',
@@ -15,7 +15,7 @@ module.exports = {
     new webpack.DllPlugin({
       context: __dirname,
       name: '[name]_[hash]',
-      path: path.join(__dirname, '/doc/dll', 'dll.json'),
+      path: path.join(__dirname, '/docs/dll', 'dll.json'),
     }),
 
   ],

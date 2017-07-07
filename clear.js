@@ -1,5 +1,5 @@
 const del = require('del');
 
-const delArr = ['dist'];
+const delArr = ['docs'];
 
 del.sync(delArr);
