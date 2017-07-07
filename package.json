@@ -10,11 +10,16 @@
     "babel-loader": "^7.1.1",
     "babel-polyfill": "^6.23.0",
     "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "css-loader": "^0.28.4",
     "del": "^3.0.0",
     "eslint": "^4.1.1",
     "eslint-config-airbnb-base": "^11.2.0",
     "eslint-plugin-import": "^2.6.1",
     "html-webpack-plugin": "^2.29.0",
+    "node-sass": "4.0.0",
+    "sass-loader": "^6.0.6",
+    "style-loader": "^0.18.2",
     "webpack": "2.6.1",
     "webpack-dev-server": "^2.5.0"
   },
@@ -23,9 +28,12 @@
     "react-dom": "^15.6.1"
   },
   "scripts": {
+    "whelp": "webpack --help",
     "clear": "node clear",
     "dll": "webpack --config webpack.dll.js",
     "pkg": "webpack --config webpack.config.js",
-    "dist": "yarn clear && yarn dll && yarn pkg"
+    "dev": "webpack-dev-server --config webpack.config.js --open",
+    "dist": "yarn clear && yarn dll && yarn pkg -- --color --display-modules",
+    "test": "yarn clear && yarn dll && yarn pkg  && yarn dev"
   }
 }
