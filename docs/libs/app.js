@@ -1068,7 +1068,7 @@ exports = module.exports = __webpack_require__(1)(undefined);
 
 
 // module
-exports.push([module.i, ".content {\n  min-height: 800px;\n  background-color: #ddd;\n  margin-bottom: 20px;\n  border-radius: 4px;\n  box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.2);\n  padding: 20px; }\n", ""]);
+exports.push([module.i, ".content {\n  min-height: 800px;\n  background-color: #ddd;\n  margin-bottom: 20px;\n  border-radius: 4px;\n  box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.2);\n  padding: 20px; }\n  .content .list-group {\n    margin-bottom: 0; }\n", ""]);
 
 // exports
 
