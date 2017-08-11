@@ -3,7 +3,7 @@ const path = require('path');
 
 module.exports = {
   entry: {
-    libs: ['babel-polyfill', 'react', 'react-dom'],
+    libs: ['babel-polyfill', 'react', 'react-dom', 'markdown'],
   },
   output: {
     path: path.join(__dirname, '/docs/libs'),
