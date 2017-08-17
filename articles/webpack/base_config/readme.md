@@ -1,5 +1,4 @@
 # Webpack常用基本配置
-
 ![nature][nature]
 ## basic structure
 ```javascript
@@ -14,4 +13,4 @@ const webpack_config = {
   devServer:{},
 }
 ```
-[nature]:https://unsplash.it/g/980/100/?random&blur
+[nature]:https://unsplash.it/980/100/?random&blur
