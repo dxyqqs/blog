@@ -14,4 +14,4 @@ const webpack_config = {
   devServer:{},
 }
 ```
-[nature]:http://lorempixel.com/980/100/nature/
+[nature]:https://unsplash.it/g/980/100/?random
