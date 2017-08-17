@@ -1,8 +1,9 @@
 ## 目录
-+ webpack
++ [webpack][wp]
   + TBD
   + TBD
 + TBD
 
+[wp]:./articles/webpack
 <!-- https://pages.github.com -->
 <!-- https://dxyqqs.github.io/blog/ -->
