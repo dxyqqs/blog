@@ -7,11 +7,11 @@ const webpack_config = {
   entry:{},
   output:{},
   module:{},
-  devtool:"",
   resolve:{},
   externals:{},
   plugins:{},
   devServer:{},
+  devtool:"",
 }
 ```
 ## entry
