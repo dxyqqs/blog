@@ -34,7 +34,7 @@ const webpack_config = {
 ```javascript
 const webpack_config = {
   entry:{ // or ['main.js'] / "main.js"
-    index:["test.js"] // 这里用了数组
+    index:["test.js"] // 这里在Object中用了数组
   }
 }
 ```
