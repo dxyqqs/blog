@@ -70,7 +70,7 @@
 /* 0 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = (__webpack_require__(4))(198);
+module.exports = (__webpack_require__(3))(198);
 
 /***/ }),
 /* 1 */
@@ -517,6 +517,12 @@ function updateLink (link, options, obj) {
 /* 3 */
 /***/ (function(module, exports) {
 
+module.exports = libs_69ebeda2aca083965b8a;
+
+/***/ }),
+/* 4 */
+/***/ (function(module, exports) {
+
 module.exports = {
 	"HeaderConfig": [
 		{
@@ -705,12 +711,6 @@ module.exports = {
 };
 
 /***/ }),
-/* 4 */
-/***/ (function(module, exports) {
-
-module.exports = libs_69ebeda2aca083965b8a;
-
-/***/ }),
 /* 5 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -729,7 +729,9 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _data = __webpack_require__(3);
+var _data = __webpack_require__(4);
+
+var _markdown = __webpack_require__(17);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -745,7 +747,12 @@ var Content = function (_Component) {
   function Content(props) {
     _classCallCheck(this, Content);
 
-    return _possibleConstructorReturn(this, (Content.__proto__ || Object.getPrototypeOf(Content)).call(this, props));
+    var _this = _possibleConstructorReturn(this, (Content.__proto__ || Object.getPrototypeOf(Content)).call(this, props));
+
+    _this.state = { Articles: _data.Articles.map(function (e) {
+        return Object.assign({}, e, { show: false });
+      }) };
+    return _this;
   }
 
   _createClass(Content, [{
@@ -776,15 +783,32 @@ var Content = function (_Component) {
   }, {
     key: "renderArticleLinks",
     value: function renderArticleLinks() {
+      var _this2 = this;
 
-      return _data.Articles.map(function (_ref, index) {
+      return this.state.Articles.map(function (_ref, index) {
         var title = _ref.title;
         return _react2.default.createElement(
-          "a",
-          { href: "#", key: index, className: "list-group-item" },
-          title
+          "div",
+          { key: index, className: "list-group-item " + (_this2.state.Articles[index].show ? 'active' : ''), onClick: _this2.showArticle.bind(_this2, index) },
+          _react2.default.createElement(
+            "a",
+            { href: "#" },
+            title
+          )
         );
       });
+    }
+  }, {
+    key: "showArticle",
+    value: function showArticle(index) {
+      this.state.Articles[index].show = !this.state.Articles[index].show;
+      this.setState({ Articles: this.state.Articles });
+    }
+  }, {
+    key: "componentWillMount",
+    value: function componentWillMount() {
+      var md_content = "Hello.\n\n* This is markdown.\n* It is fun\n* Love it or leave it.";
+      console.log(_markdown.markdown.toHTML(md_content));
     }
   }]);
 
@@ -816,7 +840,7 @@ var _main = __webpack_require__(9);
 
 var _main2 = _interopRequireDefault(_main);
 
-var _data = __webpack_require__(3);
+var _data = __webpack_require__(4);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -910,8 +934,8 @@ if(content.locals) module.exports = content.locals;
 if(false) {
 	// When the styles change, update the <style> tags
 	if(!content.locals) {
-		module.hot.accept("!!../node_modules/css-loader/index.js!../node_modules/sass-loader/lib/loader.js!./index.scss", function() {
-			var newContent = require("!!../node_modules/css-loader/index.js!../node_modules/sass-loader/lib/loader.js!./index.scss");
+		module.hot.accept("!!../node_modules/css-loader/index.js??ref--1-1!../node_modules/sass-loader/lib/loader.js!../node_modules/postcss-loader/lib/index.js!./index.scss", function() {
+			var newContent = require("!!../node_modules/css-loader/index.js??ref--1-1!../node_modules/sass-loader/lib/loader.js!../node_modules/postcss-loader/lib/index.js!./index.scss");
 			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 			update(newContent);
 		});
@@ -924,7 +948,7 @@ if(false) {
 /* 8 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = (__webpack_require__(4))(197);
+module.exports = (__webpack_require__(3))(197);
 
 /***/ }),
 /* 9 */
@@ -1068,7 +1092,7 @@ exports = module.exports = __webpack_require__(1)(undefined);
 
 
 // module
-exports.push([module.i, ".content {\n  min-height: 800px;\n  background-color: #ddd;\n  margin-bottom: 20px;\n  border-radius: 4px;\n  box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.2);\n  padding: 20px; }\n  .content .list-group {\n    margin-bottom: 0; }\n", ""]);
+exports.push([module.i, ".content{min-height:800px;background-color:#ddd;margin-bottom:20px;border-radius:4px;box-shadow:inset 0 0 30px rgba(0,0,0,.2);padding:20px}.content .list-group{margin-bottom:0}", ""]);
 
 // exports
 
@@ -1082,7 +1106,7 @@ exports = module.exports = __webpack_require__(1)(undefined);
 
 
 // module
-exports.push([module.i, ".header {\n  margin-top: 20px; }\n  .header h1 {\n    color: #f00; }\n", ""]);
+exports.push([module.i, ".header{margin-top:20px}.header h1{color:red}", ""]);
 
 // exports
 
@@ -1096,7 +1120,7 @@ exports = module.exports = __webpack_require__(1)(undefined);
 
 
 // module
-exports.push([module.i, "body {\n  background-color: #eee; }\n", ""]);
+exports.push([module.i, "body{background-color:#eee}", ""]);
 
 // exports
 
@@ -1122,8 +1146,8 @@ if(content.locals) module.exports = content.locals;
 if(false) {
 	// When the styles change, update the <style> tags
 	if(!content.locals) {
-		module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/sass-loader/lib/loader.js!./main.scss", function() {
-			var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/sass-loader/lib/loader.js!./main.scss");
+		module.hot.accept("!!../../../node_modules/css-loader/index.js??ref--1-1!../../../node_modules/sass-loader/lib/loader.js!../../../node_modules/postcss-loader/lib/index.js!./main.scss", function() {
+			var newContent = require("!!../../../node_modules/css-loader/index.js??ref--1-1!../../../node_modules/sass-loader/lib/loader.js!../../../node_modules/postcss-loader/lib/index.js!./main.scss");
 			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 			update(newContent);
 		});
@@ -1153,8 +1177,8 @@ if(content.locals) module.exports = content.locals;
 if(false) {
 	// When the styles change, update the <style> tags
 	if(!content.locals) {
-		module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/sass-loader/lib/loader.js!./main.scss", function() {
-			var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/sass-loader/lib/loader.js!./main.scss");
+		module.hot.accept("!!../../../node_modules/css-loader/index.js??ref--1-1!../../../node_modules/sass-loader/lib/loader.js!../../../node_modules/postcss-loader/lib/index.js!./main.scss", function() {
+			var newContent = require("!!../../../node_modules/css-loader/index.js??ref--1-1!../../../node_modules/sass-loader/lib/loader.js!../../../node_modules/postcss-loader/lib/index.js!./main.scss");
 			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 			update(newContent);
 		});
@@ -1257,6 +1281,12 @@ module.exports = function (css) {
 	return fixedCss;
 };
 
+
+/***/ }),
+/* 17 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = (__webpack_require__(3))(196);
 
 /***/ })
 /******/ ]);
