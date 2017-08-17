@@ -15,7 +15,7 @@ const webpack_config = {
 }
 ```
 ## entry
-
+作为入口属性，``entry``非常简单。这里给出一个表格，说明``entry``赋值的类型以及作用
 ```javascript
 const webpack_config = {
   entry:{ // or ['main.js'] / "main.js"
@@ -23,7 +23,6 @@ const webpack_config = {
   }
 }
 ```
-
 |Type|E.g.|Description|
 |:--|:--|:--|
 |``String``|"test.js"|不推荐使用，无法自定义chunk name(默认是``main``)|
