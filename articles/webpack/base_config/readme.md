@@ -38,6 +38,20 @@ const webpack_config = {
 }
 ```
 数组的作用就是将一组没有关联的文件打包，在后面的优化章节会了解到一些有用的消息
+## output
+先给出一个表格，来看看有哪些常用的属性
+```javascript
+const path = require('path')
+const webpack_config = {
+  output:{
+    path: path.join(__dirname, './dist'),
+    publicPath: '/',
+    filename: '[name].js',
+    chunkFilename: '[name].js',
+    sourceMapFilename: '[file].map'
+  }
+}
+```
 
 
 
