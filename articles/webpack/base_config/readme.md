@@ -1,5 +1,6 @@
-![nature][nature]
+
 # Webpack常用基本配置
+![nature][nature]
 ## basic structure
 ```javascript
 const webpack_config = {
