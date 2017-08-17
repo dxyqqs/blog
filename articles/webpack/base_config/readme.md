@@ -53,4 +53,4 @@ const webpack_config = {
 
 
 
-[nature]:https://unsplash.it/980/100/?random&blur
+[nature]:https://unsplash.it/980/100/?random
